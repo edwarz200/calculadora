@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="shortcut icon" href="ASSETS/calculator-icon.png">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="JS/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------------------------------------------------------------------------------------------------------------------------->
+    <!-- container div primero -->
+    <!-------------------------------------------------------------------------------------------------------------------------->
+    <div class="contaonerdiv">
+        <section class="resultados container1">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td class="tdremuestra">
+                            <section class="s1">
+                                <input class="resmuestra res2 inp" value="" type="text" readonly>
+                            </section>
+                            <section class="s2">
+                                <input class="resigual res2 inp" value="" type="text" readonly>
+                            </section>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td2">
+                            <input class="res inp" value="0" readonly>
+                            <section class="raya"></section>
+                            <section class="raya2"></section>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="botones container1">
+            <table class="table t1 table-striped table-dark">
+                <thead>
+                    <tr>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="c()">C</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="ce()">CE</button>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+            <table class="table t1 table-striped table-dark">
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(1)">1</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(2)">2</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(3)">3</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="division()">÷</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(4)">4</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(5)">5</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(6)">6</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block resta" onclick="resta()">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(7)">7</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(8)">8</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(9)">9</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="multiplicacion()">x</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-secondary btn-block suma" onclick="numeros('.')">.</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="numeros(0)">0</button>
+                        <td>
+                            <button class="btn btn-secondary btn-block" onclick="igual()">=</button>
+                        </td>
+
+                        <td>
+                            <button class="btn btn-secondary btn-block suma" onclick="suma()">+</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <!-------------------------------------------------------------------------------------------------------------------------->
+    <!-- container div segundo -->
+    <!-------------------------------------------------------------------------------------------------------------------------->
+    <div class="contaonerdiv2">
+        <section class="resultados">
+            <h3>0</h3>
+            <section class="raya"></section>
+        </section>
+        <section class="botones">
+            <ul>
+                <li class="section1">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">C</button>
+                </li>
+                <li class="section1">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">CE</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">1</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">2</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">3</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">÷</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">4</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">5</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">6</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block resta" onclick="">-</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">7</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">8</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">9</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">x</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block suma" onclick="">.</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">0</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block" onclick="">=</button>
+                </li>
+                <li class="section2">
+                    <button class="btn buttonpeq btn-light btn-block suma" onclick="">+</button>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

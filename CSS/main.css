@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.inp {
+    border: none;
+    font-size: 30px;
+    width: 100%;
+}
+
+.res {
+    padding: 5px;
+    text-align: right;
+}
+
+.res2 {
+    position: relative;
+    display: none;
+    opacity: 0;
+}
+
+.s1 {
+    margin: 0.1%;
+    width: 50%;
+    float: left;
+}
+
+.s1 .res2 {
+    text-align: right;
+}
+
+.s2 {
+    margin: 0.1%;
+    width: 49.1%;
+    float: left;
+}
+
+.resmuestradesoc {
+    display: block;
+    -webkit-animation: animacionres .15s forwards;
+}
+
+.tdremuestra, .td2 {
+    padding: 0 !important;
+}
+
+.raya {
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
+.raya2 {
+    display: none;
+    width: 1%;
+    height: 2px;
+    background-color: mediumblue;
+}
+
+.raya2desoculto {
+    display: block;
+    width: 100%;
+}
+
+.table {
+    height: 30px;
+    margin: 0 !important;
+}
+
+.buttonpeq {
+    height: 100%;
+}
+
+.container1 {
+    position: relative;
+    width: 40% !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contaonerdiv {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+}
+
+.section1 {
+    margin: 0.1%;
+    width: 49.8%;
+    height: 100px;
+    float: left;
+}
+
+.section2 {
+    margin: 0.1%;
+    width: 24.8%;
+    height: 100px;
+    float: left;
+}
+
+.contaonerdiv2 {
+    display: none
+}
+
+@media only screen and (max-width: 600px) {
+    .contaonerdiv {
+        display: none
+    }
+    .contaonerdiv2 {
+        display: block
+    }
+}
+
+@keyframes animacionres {
+    from {
+        opacity: 0;
+        height: 0;
+        font-size: 0;
+    }
+    to {
+        opacity: 0.5;
+        height: 100%;
+        font-size: 12px;
+    }
+}
